@@ -1,0 +1,13 @@
+Source: cynthiare-repo-keyring
+Priority: extra
+Section: utils
+Maintainer: Cynthia <me+repo@cynthia.re>
+Build-Depends: debhelper (>= 10), gnupg
+Standards-Version: 3.9.5
+
+Package: cynthiare-repo-keyring
+Architecture: all
+Multi-Arch: foreign
+Depends: gpgv, ${misc:Depends}
+Recommends: gnupg
+Description: Keyring for the Cynthia.re Package Repo.

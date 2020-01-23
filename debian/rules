@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+KEYRING=cynthiare-repo-keyring.gpg
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	gpg --homedir $(CURDIR) --no-default-keyring --keyring $(CURDIR)/$(KEYRING) --import active/repo.gpg
+
+override_dh_auto_clean:
+	rm -f *.gpg
